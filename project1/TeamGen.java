@@ -1,7 +1,9 @@
+package project1;
 //Matthew Corbett, Ezra Marin, Joseph Espiritu, Madison Coffey
 //Project 1 September 1st 2022
 //Summary: Random team generator, needs to have a tab delimeted .txt file called class_list.txt in the same directory
 // gathers user's desired number of teams and randomly assigns members of the class list to each team.
+// business proposal : https://docs.google.com/document/d/1YiS8PhjvK1Ie1ypjAluB__ktEBDpWNgGM3Bf3vXeoz4/edit?usp=sharing
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -19,7 +21,7 @@ public class TeamGen {
       ArrayList<String> class_list = new ArrayList<String>();
 
         try {
-          File myObj = new File("class_list.txt");
+          File myObj = new File("project1\\class_list.txt");
           Scanner myReader = new Scanner(myObj);
 
           //read file and load into the class_list ArrayList
@@ -45,18 +47,17 @@ public class TeamGen {
         teamNumScanner.close();
 
         //initailize the integer number of teams desired
-        int intTeamNum;
+        int intTeamNum = 0;
 
         //cast input as integer
-        while (true) {
-          try{
-            intTeamNum = Integer.parseInt(strTeamNum);
-            break;
+      
+        try{
+          intTeamNum = Integer.parseInt(strTeamNum);
 
-          } catch (Exception e){
-            System.out.println("Sorry that wasn't a valid integer. Please enter a whole number");
-          }      
-        }
+        } catch (Exception e){
+          System.out.println("Sorry that wasn't a valid integer. Please enter a whole number");
+        }      
+        
 
         //shuffle class memebers - RANDOM ELEMENT
         Collections.shuffle(class_list);
