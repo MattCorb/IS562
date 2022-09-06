@@ -36,8 +36,8 @@ public class TeamGen {
         } 
         //error handling for the file reading
         catch (FileNotFoundException e) {
-          System.out.println("An error occurred.");
-          e.printStackTrace();
+          System.out.println("An error occurred. Is the class_list.txt in the same directory?");
+          //e.printStackTrace();
         }
 
         //take user input for how many teams
