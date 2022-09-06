@@ -21,7 +21,7 @@ public class TeamGen {
       ArrayList<String> class_list = new ArrayList<String>();
 
         try {
-          File myObj = new File("project1\\class_list.txt");
+          File myObj = new File("class_list.txt");
           Scanner myReader = new Scanner(myObj);
 
           //read file and load into the class_list ArrayList
