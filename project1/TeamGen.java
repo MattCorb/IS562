@@ -37,7 +37,7 @@ public class TeamGen {
         //error handling for the file reading
         catch (FileNotFoundException e) {
           System.out.println("An error occurred. Is the class_list.txt in the same directory?");
-          //e.printStackTrace();
+          return;
         }
 
         //take user input for how many teams
@@ -56,6 +56,7 @@ public class TeamGen {
 
         } catch (Exception e){
           System.out.println("Sorry that wasn't a valid integer. Please enter a whole number");
+          return;
         }      
         
 
